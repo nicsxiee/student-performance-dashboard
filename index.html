@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="hero">
+        <div>
+            <p class="eyebrow">ACADEMIC MONITORING SYSTEM</p>
+            <h1>Student Performance Dashboard</h1>
+            <p class="subtitle">Search, filter, and analyze student academic performance.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="control-group">
+                <label for="searchInput">Search Student</label>
+                <input id="searchInput" type="text" placeholder="Enter student name">
+            </div>
+
+            <div class="control-group">
+                <label for="blockFilter">Block</label>
+                <select id="blockFilter">
+                    <option value="All">All</option>
+                    <option value="31-ITE-01">31-ITE-01</option>
+                    <option value="31-ITE-02">31-ITE-02</option>
+                    <option value="31-ITE-03">31-ITE-03</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="statusFilter">Academic Status</label>
+                <select id="statusFilter">
+                    <option value="All">All</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Passed">Passed</option>
+                    <option value="Needs Improvement">Needs Improvement</option>
+                    <option value="Failed">Failed</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="applyBtn">Apply Filters</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <span>Class Average</span>
+                <strong id="classAverage"></strong>
+            </div>
+            <div class="summary-card">
+                <span>Passing Students</span>
+                <strong id="passingCount"></strong>
+            </div>
+            <div class="summary-card">
+                <span>Displayed Students</span>
+                <strong id="displayedCount"></strong>
+            </div>
+            <div class="summary-card">
+                <span>Top Student</span>
+                <strong id="topStudent"></strong>
+            </div>
+        </section>
+
+        <div id="messageArea"></div>
+        <section id="studentList"></section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
